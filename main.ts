@@ -20,10 +20,7 @@ basic.forever(function () {
         . # # . .
         . # # . .
         `)
-    if (input.buttonIsPressed(Button.B)) {
-    	
-    }
-    while (input.buttonIsPressed(Button.B)) {
+    while (true) {
         basic.showLeds(`
             # # . # #
             . . # . .
@@ -31,5 +28,8 @@ basic.forever(function () {
             . # # # .
             # . . . #
             `)
+        if (input.buttonIsPressed(Button.B)) {
+            break;
+        }
     }
 })
